@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		#rectangle {
+			height:100px;
+			width:100px;
+			background-color:rgb(255, 0, 0);
+			opacity:0.5;
+			border:1px solid rgb(0, 0, 0);
+		}
+		#rectangle {
+			animation-name: heartbeat;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes heartbeat {
+			0%    { width:100px; }
+			50%   { width:200px; }
+			100%  { width:100px; }
+		}
+        
+
+        .tourne {
+          -webkit-animation: spin 1.5s linear infinite;
+          -moz-animation: spin 1.5s linear infinite;
+          animation: spin 1.5s linear infinite;
+        }
+         
+        @-moz-keyframes spin {
+          100% { -moz-transform: rotate(-360deg); }
+        }
+        @-webkit-keyframes spin {
+          100% { -webkit-transform: rotate(-360deg); }
+        }
+        @keyframes spin {
+          100% { -webkit-transform: rotate(-360deg); transform: rotate(-360deg); }
+        }
+
+        .clignote{
+            -webkit-transition:all 1s ease-in-out;
+            -o-transition:all 1s ease-in-out;
+            -ms-transition:all 1s ease-in-out;
+            transition:all 1s ease-in-out;
+            -webkit-animation:blink normal 2s infinite ease-in-out; 
+            -ms-animation:blink normal 2s infinite ease-in-out; 
+            animation:blink normal 2s infinite ease-in-out;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            49% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }       
+        }
+
+        @keyframes blink {
+            0% {
+        opacity: 1;
+            }
+            50% {
+        opacity: 0;
+            }
+            100% {
+        opacity: 1;
+            }
+        }
+        img {
+            animation: blink 1s;
+            animation-iteration-count: infinite;
+        }
+
+	</style>
+</head>
+<body>
+	<div id='rectangle'></div>
+
+    <img src="https://static-mapetitemercerie.o10c.net/6311-large_default/tissu-thermocollant-fluo-jaune.jpg" width="200" height="200" class="clignote">
+
+    <img src="https://cdn.rosemood.fr/media/Theme/2016-04-29/3391808/cache/carte-remerciement-vierge-petit-carre-blanc-details-2.jpg.jpg" width="200" height="200" >
+
+    <img src="https://img.myloview.fr/posters/spirale-psychedelique-a-rayons-radiaux-spirale-hypnotique-700-110228223.jpg" width="200" height="200" class="tourne">
+
+</body>
+</html>
